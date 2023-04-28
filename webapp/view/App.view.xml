@@ -1,0 +1,204 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+>
+
+
+    <IconTabHeader mode="Inline">
+        <items>
+            <IconTabFilter key="generalData" text="GENERAL DATA" />
+            <IconTabFilter key="todolist" text="TO DO LIST" count="12"
+                icon="sap-icon://notes" />
+            <IconTabFilter key="services" text="SERVICES" />
+            <IconTabFilter key="attachments" text="ATTACHMENTS"
+                icon="sap-icon://attachment" />
+            <IconTabFilter key="stampe" text="STAMPE" icon="sap-icon://print" />
+
+
+        </items>
+
+    </IconTabHeader>
+
+
+    <!-- <Panel headerText="{/panelHeaderText}"
+        class="sapUiResponsiveMargin"
+        width="auto">
+        <form:SimpleForm
+            editable="true"
+            layout="ResponsiveGridLayout">
+            <Label text="UserName" />
+            <Input value="{/user}"
+                valueLiveUpdate="true"
+                width="200px"
+                enabled="{/enabled}" />
+            <Label text="Password" />
+            <Input value="{/password}"
+                valueLiveUpdate="true"
+                width="200px"
+                enabled="{/enabled}" />
+
+            <Label text="Enabled" />
+            <CheckBox selected="{/enabled}" />
+
+
+        </form:SimpleForm>
+
+
+    </Panel> -->
+
+    <!-- //general data panel -->
+    <Panel expandable="true" headerText="GENERAL DATA" width="auto"
+        class="sapUiResponsiveMargin" display="">
+        <content>
+            <!-- qui va un input con label -->
+
+            <FlexBox justifyContent="SpaceBetween">
+                <items>
+
+                    <FlexBox direction="Column">
+
+                        <Button text="+ crea nuovo progetto" />
+
+                        <Label text="Opportunity number" />
+                        <Input editable="false" />
+                        <Label text="Progect number" />
+                        <Input class="" />
+                        <Label text="Progect name" />
+                        <Input class="" />
+                        <Label text="File Type" />
+                        <Input class="" />
+                    </FlexBox>
+
+                    <FlexBox direction="Column">
+                        <Label text="Label 2" />
+                        <Input editable="false" />
+                        <Label text="Label 1" />
+                        <Input editable="false" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+
+                    </FlexBox>
+
+                    <FlexBox direction="Column">
+                        <Label text="Label 2" />
+                        <Input editable="false" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+                        <Label text="Label 1" />
+                        <Input editable="false" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+
+                    </FlexBox>
+                    <FlexBox direction="Column">
+                        <Label text="Label 3" />
+                        <Input editable="false" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+
+                    </FlexBox>
+                    <FlexBox direction="Column">
+                        <Label text="Label 3" />
+                        <Input editable="false" />
+                        <Label text="Label 1" />
+                        <Input class="" />
+                        <Label text="Label 1" />
+                        <Input editable="false" />
+                        <Label text="Label 1" />
+                        <Input editable="false" />
+                    </FlexBox>
+                    <FlexBox direction="Column">
+                        <Label text="Import Status" />
+                        <Input />
+                        <Label text="Export Status" />
+                        <Input />
+                        <Label text="System Status" />
+                        <Input />
+                    </FlexBox>
+                </items>
+            </FlexBox>
+
+            <TextArea width="100%"
+                placeholder="Enter your text here"
+                growing="true"
+                growingMaxLines="7"
+                liveChange="onLiveChange"
+                value="{/textAreaValue}"
+                showExceededText="true"
+                maxLength="1000" />
+        </content>
+    </Panel>
+
+    <!-- // to do list panel -->
+    <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+        <headerToolbar>
+            <OverflowToolbar active="true" press="onOverflowToolbarPress">
+                <Title text="TO DO LIST" />
+                <ToolbarSpacer />
+                <Button icon="sap-icon://settings" />
+                <Button icon="sap-icon://drop-down-list" />
+            </OverflowToolbar>
+        </headerToolbar>
+        <content>
+
+            <FlexBox justifyContent="SpaceBetween" alignItems="Center">
+
+                <FlexBox direction="Column">
+                    <DateTimePicker />
+
+                    <DateRangeSelection />
+
+                    <DatePicker />
+
+                </FlexBox>
+
+            </FlexBox>
+
+        </content>
+    </Panel>
+
+    <!-- //services panel -->
+    <Panel id="expandablePanel" expandable="true" width="auto"
+        class="sapUiResponsiveMargin">
+        <headerToolbar>
+            <OverflowToolbar active="true" press="onOverflowToolbarPress">
+                <Title text="SERVICES" />
+                <ToolbarSpacer />
+                <Button icon="sap-icon://settings" />
+                <Button icon="sap-icon://drop-down-list" />
+            </OverflowToolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" />
+        </content>
+    </Panel>
+
+    <!-- //attachments panel -->
+    <Panel expandable="true" headerText="ATTACHMENTS" width="auto"
+        class="sapUiResponsiveMargin">
+        <content>
+            <Text
+                text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" />
+        </content>
+    </Panel>
+
+    <!-- //stampe panel -->
+    <Panel expandable="true" headerText="STAMPE" width="auto"
+        class="sapUiResponsiveMargin">
+        <content>
+            <Text
+                text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" />
+        </content>
+    </Panel>
+
+
+</mvc:View>
